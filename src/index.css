@@ -1,0 +1,35 @@
+@import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --max-width: 1300px;
+
+  --dark-gray: #798c8c;
+  --button-hover-bg: #556161;
+  --light-gray: #aebfbe;
+  --very-light-gray: #d0d9d4;
+  --light-yellow: #f2efdf;
+  --brownish: #59554c;
+
+  --logo-font-size: 1.8rem;
+  --header-font: 1.5rem;
+  --button-font: 18px;
+  --placeholder-font: 16px;
+
+  --curvy-edges: 8px;
+
+  --input-height: 3.5rem;
+
+  --logo-font-family: gilroy-bold;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}

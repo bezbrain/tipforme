@@ -1,0 +1,78 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.main form {
+  border: 1px solid var(--dark-gray);
+  padding: 2rem 3rem 5em;
+  width: 450px;
+  border-radius: var(--curvy-edges);
+}
+
+.main form p:nth-child(2) {
+  font-size: var(--header-font);
+  margin-block: 4rem 1.5rem;
+}
+
+.main form input {
+  width: 100%;
+  height: var(--input-height);
+  margin-bottom: 1.5rem;
+  padding-left: 8px;
+  border-radius: var(--curvy-edges);
+  font-size: var(--placeholder-font);
+  border: 1px solid var(--light-gray);
+}
+.main form input::placeholder {
+  font-size: var(--placeholder-font);
+}
+.main form input:focus {
+  border: none;
+  outline: 2px solid var(--dark-gray);
+}
+
+.main form input:focus::placeholder {
+  transform: translateY(-15px);
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.inputCon p {
+  font-size: 13px;
+  padding: 5px 0px 5px 8px;
+}
+
+.main form button {
+  width: 100%;
+  padding-block: 15px;
+  font-size: var(--button-font);
+  background-color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.main form button:nth-child(5) {
+  margin-bottom: 1rem;
+  color: #fff;
+  background-color: var(--dark-gray);
+  border: none;
+  transition: ease 0.5s all;
+}
+.main form button:nth-child(5):hover {
+  background-color: var(--button-hover-bg);
+}
+
+.main form button:nth-child(7) {
+  border: 2px solid var(--dark-gray);
+  color: var(--dark-gray);
+}
+.main form button:nth-child(7):hover {
+  background-color: var(--dark-gray);
+  color: #fff;
+  font-weight: 600;
+}
