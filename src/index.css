@@ -28,6 +28,11 @@
   --input-height: 3.5rem;
 
   --logo-font-family: gilroy-bold;
+
+  /* Small Screens */
+  --input-sm-height: 2.5rem;
+  --placeholder-sm-font: 14px;
+  --button-sm-font: 15px;
 }
 
 body {

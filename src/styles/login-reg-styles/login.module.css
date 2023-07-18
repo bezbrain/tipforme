@@ -12,10 +12,23 @@
   width: 450px;
   border-radius: var(--curvy-edges);
 }
+@media screen and (max-width: 500px) {
+  .main form {
+    width: 90%;
+    padding-inline: 10px;
+    border-right: none;
+    border-left: none;
+  }
+}
 
 .main form p:nth-child(2) {
   font-size: var(--header-font);
   margin-block: 4rem 1.5rem;
+}
+@media screen and (max-width: 500px) {
+  .main form p:nth-child(2) {
+    margin-block: 2rem 1.5rem;
+  }
 }
 
 .main form input {
@@ -27,23 +40,23 @@
   font-size: var(--placeholder-font);
   border: 1px solid var(--light-gray);
 }
-.main form input::placeholder {
-  font-size: var(--placeholder-font);
-}
 .main form input:focus {
   border: none;
   outline: 2px solid var(--dark-gray);
 }
-
 .main form input:focus::placeholder {
   transform: translateY(-15px);
   font-size: 13px;
-  opacity: 0.7;
 }
-
-.inputCon p {
-  font-size: 13px;
-  padding: 5px 0px 5px 8px;
+@media screen and (max-width: 500px) {
+  .main form input {
+    height: var(--input-sm-height);
+    font-size: var(--placeholder-sm-font);
+  }
+  .main form input:focus::placeholder {
+    transform: translateY(-12px);
+    font-size: 13px;
+  }
 }
 
 .main form button {
@@ -75,4 +88,10 @@
   background-color: var(--dark-gray);
   color: #fff;
   font-weight: 600;
+}
+@media screen and (max-width: 500px) {
+  .main form button {
+    padding-block: 10px;
+    font-size: var(--button-sm-font);
+  }
 }
