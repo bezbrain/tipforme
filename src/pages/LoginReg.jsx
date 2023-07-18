@@ -1,7 +1,7 @@
 import Login from "../component/LoginReg/Login";
 import Register from "../component/LoginReg/Register";
 import { useGlobalContent } from "../context";
-import ShortFooter from "./short-footer";
+import ShortFooter from "../component/short-footer";
 
 const LoginReg = () => {
   const { navLoginReg } = useGlobalContent();

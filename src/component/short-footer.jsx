@@ -4,13 +4,13 @@ const ShortFooter = () => {
   return (
     <main>
       <hr />
-      <div>
+      <section>
         <p>Contact Us</p>
         <p>Manage Cookies</p>
-      </div>
-      <p>
+      </section>
+      <section>
         <div>c</div> 2023 Tipforme
-      </p>
+      </section>
     </main>
   );
 };
