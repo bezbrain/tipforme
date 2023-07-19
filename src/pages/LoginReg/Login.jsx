@@ -1,18 +1,14 @@
 import { FaEye, FaTimesCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import Logo from "../Logo";
+import Logo from "../../component/Logo";
 import styles from "../../styles/login-reg-styles/login.module.css";
 import { useGlobalContent } from "../../context";
-import ShortFooter from "../short-footer";
+import ShortFooter from "../../component/short-footer";
 
 const Login = () => {
   const { navLoginReg, setNavLoginReg } = useGlobalContent();
 
   const navigate = useNavigate();
-  // console.log(location.pathname);
-  // const history = useHistory();
-  // console.log(history);
-
   const handleToSignUp = (e) => {
     e.preventDefault();
     navigate("/signup"); //To dynamically change the path to signup

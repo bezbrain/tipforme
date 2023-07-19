@@ -1,15 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import LoginReg from "./pages/LoginReg";
 import SharedLayouts from "./pages/SharedLayouts";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
-import { useGlobalContent } from "./context";
-import Login from "./component/LoginReg/Login";
-import Register from "./component/LoginReg/Register";
+import Login from "./pages/LoginReg/Login";
+import Register from "./pages/LoginReg/Register";
 
 const App = () => {
-  const { navLoginReg } = useGlobalContent();
-
   return (
     <BrowserRouter>
       <Routes>

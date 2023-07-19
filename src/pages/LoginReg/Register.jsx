@@ -1,9 +1,9 @@
-import Logo from "../Logo";
+import Logo from "../../component/Logo";
 import { FaTimesCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import styles from "../../styles/login-reg-styles/reg.module.css";
 import { useGlobalContent } from "../../context";
-import ShortFooter from "../short-footer";
+import ShortFooter from "../../component/short-footer";
 
 const Register = () => {
   const { navRegInput, setNavRegInput } = useGlobalContent();
