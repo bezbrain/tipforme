@@ -10,7 +10,6 @@ const LoginReg = () => {
     <main style={{ height: "85vh" }}>
       {!navLoginReg && <Login />}
       {navLoginReg && <Register />}
-      <ShortFooter />
     </main>
   );
 };

@@ -1,14 +1,26 @@
 import { FaEye, FaTimesCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import Logo from "../Logo";
 import styles from "../../styles/login-reg-styles/login.module.css";
 import { useGlobalContent } from "../../context";
+import ShortFooter from "../short-footer";
 
 const Login = () => {
-  const { setNavLoginReg } = useGlobalContent();
+  const { navLoginReg, setNavLoginReg } = useGlobalContent();
+
+  const navigate = useNavigate();
+  // console.log(location.pathname);
+  // const history = useHistory();
+  // console.log(history);
+
+  const handleToSignUp = (e) => {
+    e.preventDefault();
+    navigate("/signup"); //To dynamically change the path to signup
+  };
 
   return (
     <>
-      <main className={styles.main}>
+      <main className={styles.main} style={{ height: "85vh" }}>
         <form>
           <Logo />
           <p>Log in or sign up</p>
@@ -26,9 +38,10 @@ const Login = () => {
           </div>
           <button>Sign in</button>
           <br />
-          <button onClick={() => setNavLoginReg(true)}>Sign up</button>
+          <button onClick={handleToSignUp}>Sign up</button>
         </form>
       </main>
+      <ShortFooter />
     </>
   );
 };

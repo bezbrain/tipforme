@@ -1,20 +1,32 @@
 .main {
-  height: 100%;
+  /* border: 2px solid red; */
+  /* height: 100%; */
 }
 
 .main > div {
   margin: 2rem 0 0 8rem;
 }
+@media screen and (max-width: 1000px) {
+  .main > div {
+    margin: 1rem 0 0 5vw;
+  }
+}
 
 .main form {
+  /* border: 2px solid red; */
   width: 450px;
   margin-inline: auto;
   margin-top: 4rem;
   text-align: center;
-  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+  .main form {
+    width: 90%;
+    padding-inline: 10px;
+  }
 }
 
 .main form div:first-child > p:first-child {
@@ -25,7 +37,7 @@
 .main form input {
   width: 100%;
   height: var(--input-height);
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   padding-left: 8px;
   border-radius: var(--curvy-edges);
   font-size: var(--placeholder-font);
@@ -43,6 +55,16 @@
   transform: translateY(-15px);
   font-size: 13px;
   opacity: 0.7;
+}
+@media screen and (max-width: 500px) {
+  .main form input {
+    height: var(--input-sm-height);
+    font-size: var(--placeholder-sm-font);
+  }
+  .main form input:focus::placeholder {
+    transform: translateY(-12px);
+    font-size: 13px;
+  }
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -89,4 +111,44 @@ input[type="number"] {
 }
 .main form div:last-child p:last-child:hover {
   text-decoration: underline;
+}
+
+/* ==================== */
+/* Registration Section */
+main form > p {
+  font-size: var(--header-font);
+  margin-block: 1rem;
+}
+
+.inputEmail,
+.inputPass {
+  margin-bottom: 1.5rem;
+  position: relative;
+  /* border: 2px solid red; */
+}
+.inputEmail div,
+.inputPass div {
+  /* border: 2px solid red; */
+  border-radius: 0 5px 5px 0;
+  height: 90%;
+  width: 40px;
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.eraseText {
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .main form button {
+    padding-block: 10px;
+    font-size: var(--button-sm-font);
+  }
 }
