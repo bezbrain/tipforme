@@ -1,11 +1,7 @@
 .logo {
-  font-size: var(--logo-font-size);
-  font-weight: bold;
-  color: #59554c;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  font-family: var(--logo-font-family);
+  /* border: 2px solid red; */
 }
 
-.logo span {
-  color: #798c8c;
+.logo img {
+  width: 120px;
 }

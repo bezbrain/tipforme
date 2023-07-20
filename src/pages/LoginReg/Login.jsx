@@ -6,12 +6,25 @@ import { useGlobalContent } from "../../context";
 import ShortFooter from "../../component/short-footer";
 
 const Login = () => {
-  const { navLoginReg, setNavLoginReg } = useGlobalContent();
+  const { loginInputs, setLoginInputs } = useGlobalContent();
+
+  const { email, password } = loginInputs;
+  // console.log(email);
+  // console.log(password);
 
   const navigate = useNavigate();
   const handleToSignUp = (e) => {
     e.preventDefault();
     navigate("/signup"); //To dynamically change the path to signup
+  };
+
+  const handleInputChange = (e) => {
+    let value = e.target.value;
+    let name = e.target.name;
+    setLoginInputs({
+      ...loginInputs,
+      [name]: value,
+    });
   };
 
   return (
@@ -24,13 +37,25 @@ const Login = () => {
             <div>
               <FaTimesCircle className={styles.eraseText} />
             </div>
-            <input type="text" placeholder="Enter email or username" />
+            <input
+              type="text"
+              placeholder="Enter email or username"
+              name="email"
+              value={email}
+              onChange={handleInputChange}
+            />
           </div>
           <div className={styles.inputPass}>
             <div>
               <FaEye className={styles.togglePass} />
             </div>
-            <input type="password" placeholder="Enter password" />
+            <input
+              type="password"
+              placeholder="Enter password"
+              name="password"
+              value={password}
+              onChange={handleInputChange}
+            />
           </div>
           <button>Sign in</button>
           <br />

@@ -6,13 +6,32 @@ import { useGlobalContent } from "../../context";
 import ShortFooter from "../../component/short-footer";
 
 const Register = () => {
-  const { navRegInput, setNavRegInput } = useGlobalContent();
+  const {
+    navRegInput,
+    setNavRegInput,
+    regInputs,
+    setRegInputs,
+    phoneCodeInput,
+    setPhoneCodeInput,
+  } = useGlobalContent();
+
+  const { firstName, lastName, username, email, password, confirmPassword } =
+    regInputs;
 
   const navigate = useNavigate();
 
   const handleSendCode = (e) => {
     e.preventDefault();
     setNavRegInput(true);
+  };
+
+  const handleInputChange = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+    setRegInputs({
+      ...regInputs,
+      [name]: value,
+    });
   };
 
   if (!navRegInput) {
@@ -27,7 +46,12 @@ const Register = () => {
               <p>Enter your phone number</p>
               <p>We’ll text you a code so we can confirm that it’s you.</p>
             </div>
-            <input type="number" placeholder="Phone number" />
+            <input
+              type="number"
+              placeholder="Phone number"
+              value={phoneCodeInput}
+              onChange={(e) => setPhoneCodeInput(e.target.value)}
+            />
             <div>
               <p>
                 By tapping Send code, you’re confirming that you’re authorized
@@ -53,37 +77,73 @@ const Register = () => {
             <div>
               <FaTimesCircle className={styles.eraseText} />
             </div>
-            <input type="text" placeholder="First Name" />
+            <input
+              type="text"
+              placeholder="First Name"
+              name="firstName"
+              value={firstName}
+              onChange={handleInputChange}
+            />
           </section>
           <section className={styles.inputEmail}>
             <div>
               <FaTimesCircle className={styles.eraseText} />
             </div>
-            <input type="text" placeholder="Last Name" />
+            <input
+              type="text"
+              placeholder="Last Name"
+              name="lastName"
+              value={lastName}
+              onChange={handleInputChange}
+            />
           </section>
           <section className={styles.inputEmail}>
             <div>
               <FaTimesCircle className={styles.eraseText} />
             </div>
-            <input type="text" placeholder="Username" />
+            <input
+              type="text"
+              placeholder="Username"
+              name="username"
+              value={username}
+              onChange={handleInputChange}
+            />
           </section>
           <section className={styles.inputEmail}>
             <div>
               <FaTimesCircle className={styles.eraseText} />
             </div>
-            <input type="text" placeholder="Email Address" />
+            <input
+              type="text"
+              placeholder="Email Address"
+              name="email"
+              value={email}
+              onChange={handleInputChange}
+            />
           </section>
           <section className={styles.inputPass}>
             <div>
               <FaTimesCircle className={styles.eraseText} />
             </div>
-            <input type="password" placeholder="Enter password" />
+            <input
+              type="password"
+              placeholder="Enter password"
+              name="password"
+              value={password}
+              onChange={handleInputChange}
+            />
           </section>
           <section className={styles.inputPass}>
             <div>
               <FaTimesCircle className={styles.eraseText} />
             </div>
-            <input type="password" placeholder="Confirm password" />
+            <input
+              type="password"
+              placeholder="Confirm password"
+              name="confirmPassword"
+              value={confirmPassword}
+              onChange={handleInputChange}
+            />
           </section>
           <button type="submit">Sign up</button>
         </form>

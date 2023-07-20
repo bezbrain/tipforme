@@ -10,13 +10,14 @@
 
 :root {
   --max-width: 1300px;
+  --max-width-padding: 1.5rem;
 
-  --dark-gray: #798c8c;
-  --button-hover-bg: #556161;
-  --light-gray: #aebfbe;
-  --very-light-gray: #d0d9d4;
-  --light-yellow: #f2efdf;
-  --brownish: #59554c;
+  --green-family: #5a6d10;
+  --button-hover-bg: #44520d;
+  --light-green-family: #a5ae52;
+  --very-light-pink: #f7e3ce;
+  --dark-orange: #b5864a;
+  --brownish: #942421;
 
   --logo-font-size: 1.8rem;
   --header-font: 1.5rem;
