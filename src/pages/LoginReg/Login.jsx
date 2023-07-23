@@ -4,6 +4,7 @@ import Logo from "../../component/Logo";
 import styles from "../../styles/login-reg-styles/login.module.css";
 import { useGlobalContent } from "../../context";
 import ShortFooter from "../../component/short-footer";
+import TipformFlag from "../../component/TipformFlag";
 
 const Login = () => {
   const { loginInputs, setLoginInputs } = useGlobalContent();
@@ -32,6 +33,7 @@ const Login = () => {
       <main className={styles.main} style={{ height: "85vh" }}>
         <form>
           <Logo />
+          <TipformFlag />
           <p>Log in or sign up</p>
           <div className={styles.inputEmail}>
             <div>
@@ -57,9 +59,11 @@ const Login = () => {
               onChange={handleInputChange}
             />
           </div>
-          <button>Sign in</button>
+          <button className={styles.signIn}>Sign in</button>
           <br />
-          <button onClick={handleToSignUp}>Sign up</button>
+          <button className={styles.signUp} onClick={handleToSignUp}>
+            Sign up
+          </button>
         </form>
       </main>
       <ShortFooter />

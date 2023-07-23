@@ -1,0 +1,11 @@
+.tipformeFlagCon {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  z-index: -20;
+}
+@media screen and (max-width: 500px) {
+  .tipformeFlagCon img {
+    width: 130px;
+  }
+}
