@@ -19,6 +19,7 @@
 
 .main form {
   /* border: 2px solid red; */
+  position: relative;
   width: 450px;
   margin-inline: auto;
   margin-top: 4rem;

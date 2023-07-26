@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "../../styles/login-reg-styles/reg.module.css";
 import { useGlobalContent } from "../../context";
 import ShortFooter from "../../component/short-footer";
+import TipformeFlag from "../../component/TipformFlag";
 
 const Register = () => {
   const {
@@ -46,6 +47,7 @@ const Register = () => {
               <p>Enter your phone number</p>
               <p>We’ll text you a code so we can confirm that it’s you.</p>
             </div>
+            <TipformeFlag />
             <input
               type="number"
               placeholder="Phone number"
@@ -72,6 +74,7 @@ const Register = () => {
       <main className={styles.main} style={{ height: "80vh" }}>
         <form style={{ height: "fitContent" }}>
           <Logo />
+          <TipformeFlag />
           <p>Complete Registration</p>
           <section className={styles.inputEmail}>
             <div>
